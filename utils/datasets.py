@@ -35,7 +35,8 @@ def collate_sentences(tokenizer: MBartTokenizer):
         return tokenizer.prepare_seq2seq_batch(
             src_lang="ru_RU", tgt_lang="en_XX",
             src_texts=X_batch, tgt_texts=y_batch,
-            padding=True, truncation=True
+            padding=True, truncation=True,
+            return_tensors='pt'
         )
 
     return collate_fn

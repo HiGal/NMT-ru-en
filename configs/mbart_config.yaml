@@ -1,0 +1,10 @@
+datasets:
+  root_folder: data/
+  split:
+    train: train
+    valid: valid
+
+training:
+  restore_checkpont: False
+  n_epochs: 1
+
