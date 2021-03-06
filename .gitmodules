@@ -1,0 +1,6 @@
+[submodule "ru-gpts"]
+	path = ru-gpts
+	url = https://github.com/sberbank-ai/ru-gpts
+[submodule "apex"]
+	path = apex
+	url = https://github.com/NVIDIA/apex
