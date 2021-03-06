@@ -3,11 +3,15 @@ from transformers import AutoTokenizer, AutoModel, Seq2SeqTrainer
 from transformers import Trainer, TrainingArguments
 from utils.dataset import YandexRuEnDataset, collate_sentences
 from models.marianmt import get_marianmt_model, get_marianmt_tokenizer
+from utils.model_utils import freeze_params, freeze_encoder, freeze_embeds
+from models.fsmt import get_fsmt_model, get_fsmt_tokenizer
 
 if __name__ == '__main__':
     tokenizer = get_marianmt_tokenizer()
     tokenizer.model_max_length=100
     model = get_marianmt_model()
+    freeze_embeds(model)
+    freeze_encoder(model)
     train_dataset = YandexRuEnDataset("data", split="train")
     val_dataset = YandexRuEnDataset("data", split="valid")
 
