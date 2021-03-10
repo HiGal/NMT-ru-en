@@ -1,0 +1,8 @@
+.idea
+data
+.ipynb_checkpoints
+logs
+__pycache__
+opus-mt-ru-en
+results
+data.zip
